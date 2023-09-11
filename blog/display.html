@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your blog</title>
+    <style>
+        body{
+            background:url(https://img.freepik.com/premium-photo/minimal-mockup-background-product-presentation_863013-110513.jpg?w=2000);
+            background-size:100%;
+            background-repeat: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="details">
+        <!-- JavaScript will populate this div with the submitted data -->
+    </div>
+
+    <script>
+        // Get query parameters from the URL
+        const queryParams = new URLSearchParams(window.location.search);
+
+        // Get values from the query parameters
+        const name = queryParams.get("name");
+        const email = queryParams.get("email");
+        phone=queryParams.get("mobile");
+        pic=queryParams.get("pic")
+        social=queryParams.get("social")
+        about=queryParams.get("about")
+        about=queryParams.get("about")
+        dob=queryParams.get("dob")
+        edu=queryParams.get("edu")
+        social=queryParams.get("social")
+        nameb=queryParams.get("nameb")
+
+
+        // Display the submitted details
+        const detailsContainer = document.getElementById("details");
+        detailsContainer.innerHTML = `
+            <center><h1 style="color:red">${nameb}</h1></center>
+            <center><img src="${pic}"></center>
+            <p><strong>Hello,</strong> Welcome to my blog . <strong>${name}</strong> here.${about}
+            i born on <strong>${dob}.</strong></p>
+            <h1>Contact Details:</h1>
+
+    
+            <p>Mail for <strong>${email}</strong> are welcome.
+            you can also contact me through whatsapp <strong>${phone}</strong>.Its my pleasure to connect with you.</p>
+            <h1>
+            Education Details:</h1>
+            <p> ${edu}</p>
+            
+    
+            <h1>Social media link:</h1>
+            
+            
+            <a href="${social}">Do follow it</a>
+            
+            
+        `;
+    </script>
+</body>
+</html>

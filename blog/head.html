@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog</title>
+    <link rel="stylesheet" href="magnifies.css">
+</head>
+<body bgcolor="#2283a2">
+    <center><p><b>Hello,Welcome! You can get your own blog by uploading the given details.</b></p></center> 
+        
+    <form id="myform" onsubmit="submitForm(event)"> <!-- Corrected function name here -->
+        <b>Name:</b><input type="text" id="name" name="name">
+        <b>Phone:</b><input type="tel" id="mobile" name="mobile">
+        <b>Suggest Name of Blog:</b><input type="text" id="name" name="nameb"><br><br>
+        <b>DOB:</b><input type="date" name="dob"> 
+        <b>Profile Pic link:</b><input type="url" name="pic"><br><br>
+        <b>About Your Self:</b><textarea rows="5" cols="10" name="about"></textarea>
+       
+
+        <b>Education:</b><textarea rows="5" cols="10" name="edu"></textarea><br><br>
+        
+        <b>Social media links:</b><input type="url"  name="social"><br><br>
+        <b>E-mail:</b><input type="email" id="email" name="email"><br><br>
+        <center><button type="submit" class="col">Create Blog</button></center>
+
+    </form>
+
+    <script>
+        function submitForm(event) { // Corrected function name here
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Get form data
+            const formData = new FormData(document.getElementById("myform"));
+
+            // Convert form data to a query string
+            const queryString = new URLSearchParams(formData).toString();
+
+            // Open a new window with the submitted data
+            const newWindow = window.open("display.html?" + queryString, "_blank");
+        }
+    </script>
+</body>
+</html>

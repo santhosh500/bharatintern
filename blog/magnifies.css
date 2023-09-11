@@ -1,0 +1,23 @@
+p
+{
+color:brown;
+font-size:25;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body
+{
+    background-image:url(https://static.storyweaver.org.in/illustrations/48176/search/4.jpg);
+    background-size:100%;
+}
+.col
+{
+color:crimson;
+background-color:blanchedalmond;
+}
+input{
+    border: 2px solid #ccc;
+    border-radius: 8px; /* Rounded corners */
+    padding: 5px;
+    font-size: 12px;
+    background-color: #f0f0f0;
+}
